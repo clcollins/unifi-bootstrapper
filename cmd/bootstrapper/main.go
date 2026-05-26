@@ -161,11 +161,11 @@ func newExportCmd() *cobra.Command {
 
 			// Write files.
 			files := map[string][]byte{
-				filepath.Join(outDir, "inventory.json"):          jsonBytes,
-				filepath.Join(outDir, "inventory.md"):            []byte(mdContent),
-				filepath.Join(terraformDir, "provider.tf"):       []byte(providerContent),
-				filepath.Join(terraformDir, "imports.tf"):        []byte(importsContent),
-				filepath.Join(terraformDir, "stubs.tf"):          []byte(stubsContent),
+				filepath.Join(outDir, "inventory.json"):    jsonBytes,
+				filepath.Join(outDir, "inventory.md"):      []byte(mdContent),
+				filepath.Join(terraformDir, "provider.tf"): []byte(providerContent),
+				filepath.Join(terraformDir, "imports.tf"):  []byte(importsContent),
+				filepath.Join(terraformDir, "stubs.tf"):    []byte(stubsContent),
 			}
 
 			for path, content := range files {

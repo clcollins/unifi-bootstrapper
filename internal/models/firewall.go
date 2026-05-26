@@ -7,28 +7,28 @@ package models
 // The RuleIndex field uses FlexInt because the UDM-Pro API returns it
 // as a string on some firmware versions and as an integer on others.
 type FirewallRule struct {
-	ID              string  `json:"_id"`
-	Name            string  `json:"name"`
-	Action          string  `json:"action"`
-	Enabled         bool    `json:"enabled"`
-	RuleIndex       FlexInt `json:"rule_index"`
-	Ruleset         string  `json:"ruleset"`
-	Protocol        string  `json:"protocol,omitempty"`
-	SrcAddress      string  `json:"src_address,omitempty"`
-	DstAddress      string  `json:"dst_address,omitempty"`
-	SrcPort         string  `json:"src_port,omitempty"`
-	DstPort         string  `json:"dst_port,omitempty"`
-	SrcNetworkID    string  `json:"src_networkconf_id,omitempty"`
-	DstNetworkID    string  `json:"dst_networkconf_id,omitempty"`
-	SrcNetworkType  string  `json:"src_networkconf_type,omitempty"`
-	DstNetworkType  string  `json:"dst_networkconf_type,omitempty"`
-	ICMPTypename    string  `json:"icmp_typename,omitempty"`
-	StateNew        bool    `json:"state_new"`
-	StateEstablished bool   `json:"state_established"`
-	StateInvalid    bool    `json:"state_invalid"`
-	StateRelated    bool    `json:"state_related"`
-	Logging         bool    `json:"logging"`
-	SiteID          string  `json:"site_id"`
+	ID               string  `json:"_id"`
+	Name             string  `json:"name"`
+	Action           string  `json:"action"`
+	Enabled          bool    `json:"enabled"`
+	RuleIndex        FlexInt `json:"rule_index"`
+	Ruleset          string  `json:"ruleset"`
+	Protocol         string  `json:"protocol,omitempty"`
+	SrcAddress       string  `json:"src_address,omitempty"`
+	DstAddress       string  `json:"dst_address,omitempty"`
+	SrcPort          string  `json:"src_port,omitempty"`
+	DstPort          string  `json:"dst_port,omitempty"`
+	SrcNetworkID     string  `json:"src_networkconf_id,omitempty"`
+	DstNetworkID     string  `json:"dst_networkconf_id,omitempty"`
+	SrcNetworkType   string  `json:"src_networkconf_type,omitempty"`
+	DstNetworkType   string  `json:"dst_networkconf_type,omitempty"`
+	ICMPTypename     string  `json:"icmp_typename,omitempty"`
+	StateNew         bool    `json:"state_new"`
+	StateEstablished bool    `json:"state_established"`
+	StateInvalid     bool    `json:"state_invalid"`
+	StateRelated     bool    `json:"state_related"`
+	Logging          bool    `json:"logging"`
+	SiteID           string  `json:"site_id"`
 }
 
 // FirewallGroup represents a UniFi firewall group (address-group or

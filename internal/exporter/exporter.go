@@ -36,10 +36,10 @@ func NewExporter(c client.ClientInterface, site string) *Exporter {
 // describing all failures. On complete success, the error is nil.
 func (e *Exporter) Export(ctx context.Context) (*models.Inventory, error) {
 	var (
-		mu     sync.Mutex
-		wg     sync.WaitGroup
-		inv    models.Inventory
-		errs   []error
+		mu   sync.Mutex
+		wg   sync.WaitGroup
+		inv  models.Inventory
+		errs []error
 	)
 
 	// fetchAndStore is a helper that runs a fetch function in a
