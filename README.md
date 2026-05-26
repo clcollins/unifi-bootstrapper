@@ -85,6 +85,10 @@ WLAN passphrases are explicitly filtered from all output files.
 
 ## License
 
+The question of copyright for AI-generated content is currently
+undecided in many jurisdictions. To the extent legally possible, this
+code is released under the license documented below.
+
 Apache License 2.0 — see [LICENSE](LICENSE) for details.
 
 ---
