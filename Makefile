@@ -2,10 +2,11 @@ GO ?= go
 BINARY_NAME ?= unifi-bootstrapper
 BUILD_OUTPUT ?= /tmp/$(BINARY_NAME)
 COVERAGE_OUTPUT ?= /tmp/coverage.out
+VERSION ?= dev
 
 .PHONY: build
 build:
-	$(GO) build -o $(BUILD_OUTPUT) ./cmd/bootstrapper/
+	$(GO) build -ldflags "-X main.version=$(VERSION)" -o $(BUILD_OUTPUT) ./cmd/bootstrapper/
 
 .PHONY: test
 test:
