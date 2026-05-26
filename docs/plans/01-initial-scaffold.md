@@ -68,3 +68,35 @@ version, always verify that golangci-lint's latest stable release was
 built with a Go version >= the target. Pin the exact version in CI
 rather than using `latest`, use the v2 config format, and use
 `golangci-lint-action@v7` (v6 does not support golangci-lint v2).
+
+### Parallel sub-agents need worktree isolation (Tasks 6.5 + 6.6)
+
+Tasks 6.5 (Terraform generator) and 6.6 (renderers) were dispatched
+as parallel sub-agents to maximize throughput. Both created separate
+feature branches but shared the same local git clone. This caused
+branch checkout conflicts — one agent's `git checkout` overwrote the
+other's working tree state.
+
+The work was recoverable because the agents touched completely
+different packages (`internal/generator/` vs `internal/renderer/`)
+and neither committed. The mixed working tree was sorted out manually
+via stash-and-separate after both agents completed.
+
+**Takeaway:** When dispatching parallel agents that create separate
+git branches in the same repository, use worktree isolation (separate
+git worktrees) or serialize the agents. Parallel dispatch into a
+shared clone is only safe when agents work on the same branch or
+modify non-overlapping files without switching branches.
+
+### Plan document naming convention (revised after Task 6.6)
+
+The original scaffold plan used descriptive filenames
+(`initial-scaffold.md`, `models.md`, etc.) per the framework's
+recommendation to avoid numeric prefixes since PR numbers aren't
+known at creation time. In practice, this made it difficult to see
+the chronological order of plans at a glance.
+
+**Takeaway:** Use `##-summary.md` format (e.g., `01-initial-scaffold.md`,
+`02-models.md`) for plan documents. The number reflects creation
+order, not PR number. This provides natural sort order while keeping
+descriptive names. Update cross-references when renaming.

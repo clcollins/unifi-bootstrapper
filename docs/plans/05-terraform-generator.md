@@ -39,7 +39,7 @@ elsewhere without the generator knowing or caring.
 - **Plan ID:** 2026-05-25-unifi-bootstrapper
 - **Task:** 6.5 -- Implement Terraform import block and resource stub
   generator
-- **Builds on:** models (Task 6.2, `docs/plans/models.md`) which
+- **Builds on:** models (Task 6.2, `docs/plans/02-models.md`) which
   defines `Inventory`, `Network`, `FirewallRule`, `FirewallGroup`,
   `WLAN`, `PortForward`, `PortProfile`, `StaticRoute`, and `Device`
   types.
@@ -86,7 +86,7 @@ elsewhere without the generator knowing or caring.
 
 ## Lessons from prior plans
 
-- The models plan (`docs/plans/models.md`) established the convention
+- The models plan (`docs/plans/02-models.md`) established the convention
   of keeping packages pure and side-effect-free where possible. This
   generator follows the same principle.
 - The renderer plan demonstrates the pattern of redacting sensitive
