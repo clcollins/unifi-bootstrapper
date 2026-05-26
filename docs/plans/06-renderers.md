@@ -38,7 +38,7 @@ output supports human review and documentation.
   (`"test-passphrase-do-not-use"`, `"guest-fake-password-not-real"`) and
   verify redaction by scanning rendered output bytes for those known
   values.
-- Predecessor plans: `docs/plans/models.md` (defines the data structures
+- Predecessor plans: `docs/plans/02-models.md` (defines the data structures
   these renderers consume).
 
 ## Testing

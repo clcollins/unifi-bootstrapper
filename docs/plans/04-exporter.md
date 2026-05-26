@@ -23,9 +23,9 @@ acceptable.
 
 ## Context
 
-- Builds on `docs/plans/http-client.md` which established the
+- Builds on `docs/plans/03-http-client.md` which established the
   `ClientInterface` abstraction and `MockClient` for testing.
-- Builds on `docs/plans/models.md` which defined the `Inventory` struct
+- Builds on `docs/plans/02-models.md` which defined the `Inventory` struct
   aggregating all resource types.
 - The exporter is a pure orchestrator: it knows nothing about HTTP,
   JSON, or the API wire format. It only calls `ClientInterface` methods

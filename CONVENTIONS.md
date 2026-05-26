@@ -85,8 +85,9 @@ testdata/fixtures/    Mock API response fixtures for tests
 ### Plan Documents (in-repo)
 
 - Every PR must have an associated plan document in `docs/plans/`
-- Plan documents use descriptive filenames (e.g., `initial-scaffold.md`),
-  not numeric prefixes
+- Plan documents use numbered descriptive filenames in `##-summary.md`
+  format (e.g., `01-initial-scaffold.md`, `02-models.md`), where the
+  number reflects creation order
 - Plans must consider lessons learned from previous plans in the same
   directory
 - Superseded plans are preserved with a clear note at the top pointing
