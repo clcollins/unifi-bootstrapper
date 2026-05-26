@@ -1,0 +1,27 @@
+# Build output
+/unifi-bootstrapper
+
+# Generated Terraform files
+output/
+terraform.tfvars
+generated.tf
+
+# Environment files
+*.env
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Go build cache (usually handled by Go, but just in case)
+vendor/
+
+# Test coverage output
+/coverage.out

@@ -1,0 +1,5 @@
+# Disable line length — long lines are common in technical docs
+MD013: false
+
+# Allow duplicate headings — plan documents may reuse headings
+MD024: false

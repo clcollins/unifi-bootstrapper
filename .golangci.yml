@@ -1,0 +1,13 @@
+run:
+  timeout: 5m
+  go: "1.26.3"
+
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - ineffassign
+    - typecheck
