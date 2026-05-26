@@ -23,8 +23,7 @@ jobs:
       - name: Install golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
-          version: latest
-          args: --timeout=5m
+          version: v2.12.2
 
       - name: Run CI checks
         run: make test coverage
