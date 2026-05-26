@@ -53,5 +53,18 @@ reference.
 
 ## Lessons Learned
 
-*No prior plans exist — this section will be populated as the project
-progresses and subsequent plans reference lessons from this scaffold.*
+### golangci-lint v1 vs v2 with Go 1.26 (revised by PR #1)
+
+The scaffold shipped `.golangci.yml` in v1 format and used
+`golangci-lint-action@v6` with `version: latest`, which resolved to
+v1.64.8 — built with Go 1.24. Go 1.26.3 targets fail with
+`the Go language version used to build golangci-lint is lower than the
+targeted Go version`. Fix: migrate config to v2 format (add `version:
+"2"`, use `default: none`, drop `gosimple`/`typecheck` which are merged
+or removed in v2) and pin the action to `v2.12.2`.
+
+**Takeaway:** When scaffolding a Go project targeting a recent Go
+version, always verify that golangci-lint's latest stable release was
+built with a Go version >= the target. Pin the exact version in CI
+rather than using `latest`, use the v2 config format, and use
+`golangci-lint-action@v7` (v6 does not support golangci-lint v2).

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "rc": "ok"
+  },
+  "data": [
+    {
+      "_id": "f6a7b8c9d0e1f2a3b4c5d6e7",
+      "name": "HomeNet-5G",
+      "enabled": true,
+      "security": "wpapsk",
+      "wpa_mode": "wpa2",
+      "x_passphrase": "test-passphrase-do-not-use",
+      "vlan": 1,
+      "vlan_enabled": false,
+      "is_guest": false,
+      "hide_ssid": false,
+      "wlan_band": "both",
+      "networkconf_id": "5f2e4a3b1c9d8e7f6a5b4c3d",
+      "usergroup_id": "a1a2a3a4a5a6a7a8a9a0a1a2",
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "a7b8c9d0e1f2a3b4c5d6e7f8",
+      "name": "GuestWiFi",
+      "enabled": true,
+      "security": "wpapsk",
+      "wpa_mode": "wpa2",
+      "x_passphrase": "guest-fake-password-not-real",
+      "vlan": 50,
+      "vlan_enabled": true,
+      "is_guest": true,
+      "hide_ssid": false,
+      "wlan_band": "both",
+      "networkconf_id": "6a3b4c5d6e7f8a9b0c1d2e3f",
+      "usergroup_id": "b2b3b4b5b6b7b8b9b0b1b2b3",
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    }
+  ]
+}

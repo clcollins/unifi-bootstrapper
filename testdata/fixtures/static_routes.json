@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "rc": "ok"
+  },
+  "data": [
+    {
+      "_id": "f2a3b4c5d6e7f8a9b0c1d2e3",
+      "name": "VPN Subnet Route",
+      "enabled": true,
+      "type": "nexthop-route",
+      "static-route_network": "172.16.10.0/24",
+      "gateway_ip": "10.0.1.1",
+      "gateway_type": "ip-address",
+      "interface": "",
+      "distance": 1,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "a3b4c5d6e7f8a9b0c1d2e3f4",
+      "name": "Blackhole Route",
+      "enabled": true,
+      "type": "blackhole",
+      "static-route_network": "192.168.200.0/24",
+      "gateway_ip": "",
+      "gateway_type": "",
+      "interface": "",
+      "distance": 254,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    }
+  ]
+}

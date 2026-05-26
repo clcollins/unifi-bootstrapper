@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "rc": "ok"
+  },
+  "data": [
+    {
+      "_id": "a1b2c3d4e5f6a7b8c9d0e1f2",
+      "name": "Allow Established",
+      "action": "accept",
+      "enabled": true,
+      "rule_index": "2000",
+      "ruleset": "LAN_IN",
+      "protocol": "all",
+      "src_address": "",
+      "dst_address": "",
+      "src_networkconf_id": "",
+      "dst_networkconf_id": "",
+      "src_networkconf_type": "NETv4",
+      "dst_networkconf_type": "NETv4",
+      "state_new": false,
+      "state_established": true,
+      "state_invalid": false,
+      "state_related": true,
+      "logging": false,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "b2c3d4e5f6a7b8c9d0e1f2a3",
+      "name": "Drop Invalid",
+      "action": "drop",
+      "enabled": true,
+      "rule_index": 2001,
+      "ruleset": "LAN_IN",
+      "protocol": "all",
+      "src_address": "",
+      "dst_address": "",
+      "src_networkconf_id": "",
+      "dst_networkconf_id": "",
+      "src_networkconf_type": "NETv4",
+      "dst_networkconf_type": "NETv4",
+      "state_new": false,
+      "state_established": false,
+      "state_invalid": true,
+      "state_related": false,
+      "logging": true,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "c3d4e5f6a7b8c9d0e1f2a3b4",
+      "name": "Block Guest to LAN",
+      "action": "reject",
+      "enabled": true,
+      "rule_index": "3000",
+      "ruleset": "GUEST_IN",
+      "protocol": "all",
+      "src_address": "",
+      "dst_address": "",
+      "src_networkconf_id": "6a3b4c5d6e7f8a9b0c1d2e3f",
+      "dst_networkconf_id": "5f2e4a3b1c9d8e7f6a5b4c3d",
+      "src_networkconf_type": "NETv4",
+      "dst_networkconf_type": "NETv4",
+      "src_port": "",
+      "dst_port": "",
+      "icmp_typename": "",
+      "state_new": true,
+      "state_established": false,
+      "state_invalid": false,
+      "state_related": false,
+      "logging": true,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    }
+  ]
+}
