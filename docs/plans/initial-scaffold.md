@@ -66,4 +66,5 @@ or removed in v2) and pin the action to `v2.12.2`.
 **Takeaway:** When scaffolding a Go project targeting a recent Go
 version, always verify that golangci-lint's latest stable release was
 built with a Go version >= the target. Pin the exact version in CI
-rather than using `latest`, and use the v2 config format.
+rather than using `latest`, use the v2 config format, and use
+`golangci-lint-action@v7` (v6 does not support golangci-lint v2).
