@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "rc": "ok"
+  },
+  "data": [
+    {
+      "_id": "b8c9d0e1f2a3b4c5d6e7f8a9",
+      "name": "Web Server HTTP",
+      "enabled": true,
+      "src": "any",
+      "dst_port": "80",
+      "fwd": "10.0.1.200",
+      "fwd_port": "8080",
+      "proto": "tcp",
+      "log": false,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f",
+      "pfwd_interface": "wan"
+    },
+    {
+      "_id": "c9d0e1f2a3b4c5d6e7f8a9b0",
+      "name": "Minecraft Server",
+      "enabled": true,
+      "src": "any",
+      "dst_port": "25565",
+      "fwd": "10.0.1.150",
+      "fwd_port": "25565",
+      "proto": "tcp_udp",
+      "log": true,
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f",
+      "pfwd_interface": "wan"
+    }
+  ]
+}

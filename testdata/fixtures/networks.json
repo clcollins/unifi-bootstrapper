@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "rc": "ok"
+  },
+  "data": [
+    {
+      "_id": "5f2e4a3b1c9d8e7f6a5b4c3d",
+      "name": "Default LAN",
+      "purpose": "corporate",
+      "subnet": "10.0.1.0/24",
+      "vlan_enabled": false,
+      "dhcp_enabled": true,
+      "dhcpd_start": "10.0.1.100",
+      "dhcpd_stop": "10.0.1.254",
+      "dhcpd_dns_enabled": true,
+      "domain_name": "localdomain",
+      "igmp_snooping": true,
+      "networkgroup": "LAN",
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "6a3b4c5d6e7f8a9b0c1d2e3f",
+      "name": "Guest Network",
+      "purpose": "guest",
+      "subnet": "10.0.50.0/24",
+      "vlan": 50,
+      "vlan_enabled": true,
+      "dhcp_enabled": true,
+      "dhcpd_start": "10.0.50.100",
+      "dhcpd_stop": "10.0.50.254",
+      "dhcpd_dns_enabled": false,
+      "domain_name": "",
+      "igmp_snooping": false,
+      "networkgroup": "LAN",
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    },
+    {
+      "_id": "7b4c5d6e7f8a9b0c1d2e3f4a",
+      "name": "Management VLAN",
+      "purpose": "corporate",
+      "subnet": "10.0.99.0/24",
+      "vlan": 99,
+      "vlan_enabled": true,
+      "dhcp_enabled": true,
+      "dhcpd_start": "10.0.99.10",
+      "dhcpd_stop": "10.0.99.50",
+      "dhcpd_dns_enabled": true,
+      "domain_name": "mgmt.localdomain",
+      "igmp_snooping": true,
+      "networkgroup": "LAN",
+      "site_id": "6a1b2c3d4e5f6a7b8c9d0e1f"
+    }
+  ]
+}
