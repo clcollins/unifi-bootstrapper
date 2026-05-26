@@ -589,15 +589,15 @@ func TestCookieSessionAuth_LoginFailure(t *testing.T) {
 
 func TestGetMethods_ReturnTypes(t *testing.T) {
 	fixtures := map[string]string{
-		"/proxy/network/api/s/default/rest/networkconf":  "networks.json",
-		"/proxy/network/api/s/default/rest/firewallrule": "firewall_rules.json",
+		"/proxy/network/api/s/default/rest/networkconf":   "networks.json",
+		"/proxy/network/api/s/default/rest/firewallrule":  "firewall_rules.json",
 		"/proxy/network/api/s/default/rest/firewallgroup": "firewall_groups.json",
-		"/proxy/network/api/s/default/rest/wlanconf":     "wlans.json",
-		"/proxy/network/api/s/default/rest/portforward":  "port_forwards.json",
-		"/proxy/network/api/s/default/rest/portconf":     "port_profiles.json",
-		"/proxy/network/api/s/default/rest/routing":      "static_routes.json",
-		"/proxy/network/api/s/default/stat/device":       "devices.json",
-		"/proxy/network/api/s/default/stat/health":       "",
+		"/proxy/network/api/s/default/rest/wlanconf":      "wlans.json",
+		"/proxy/network/api/s/default/rest/portforward":   "port_forwards.json",
+		"/proxy/network/api/s/default/rest/portconf":      "port_profiles.json",
+		"/proxy/network/api/s/default/rest/routing":       "static_routes.json",
+		"/proxy/network/api/s/default/stat/device":        "devices.json",
+		"/proxy/network/api/s/default/stat/health":        "",
 	}
 
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
